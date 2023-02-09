@@ -1,0 +1,30 @@
+body{
+    margin:40px;
+    font-size:larger;
+    background-color:darkgreen;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color:yellow;
+}
+span{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:yellow;
+}
+pre{
+    color:white;
+    margin-left:100px;
+    font-weight: bold;
+}
+.pre1{
+    color:black;
+    font-weight: normal;
+    position:absolute;
+    left:20px;
+}
+p{
+    font-weight: bold;;
+}

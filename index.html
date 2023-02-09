@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="map.css">
+    <title>Maps&Sets</title>
+</head>
+<body>
+    <h1>MAPS & SETS</h1>
+    <hr>
+    <br>
+    <span>QUESTION 1.</span>&nbsp;
+    <P>
+      You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+      Your task is to remove all the duplicate occurrences of characters in the string.
+     </P>
+    <span>SOLUTION.</span>
+    <pre>
+      //unique elements
+      //insertion
+      let s="abcadeecfb";
+      //set stores unique elements only
+      let uniqueCharacters=new Set();
+      for(let i=0;i < s.length;i++)
+        {
+          uniqueCharacters.add(s[i]);
+        }
+      let result="";
+      for(let key of uniqueCharacters.keys())
+        {
+          result+=key;
+        }
+      console.log(result);
+    </pre>
+
+    <span>Input 1:</span>&nbsp;abcadeecfb
+     <br>
+    <span>Output:</span>&nbsp;  abcdef
+    <br><br>
+    <hr>
+    <br>
+
+    <span>QUESTION 2.</span>&nbsp;
+    <P>
+      You are given a string (s) of length N, you have to print the count of all alphabet.(using maps)
+    </P>
+    <span>SOLUTION.</span>
+    <pre>
+      let map=new Map();
+      let s="abcadeecfb";
+        /* map.set("a",0);
+         map.set("b",0);
+         map.set("c",0);
+         map.set("d",0);
+         map.set("e",0);
+         map.set("f",0);
+         map.set("g",0);
+         map.set("h",0);
+         map.set("i",0);
+         map.set("j",0);
+         map.set("k",0);
+         map.set("l",0);
+         map.set("m",0);
+         map.set("n",0);
+         map.set("o",0);
+         map.set("p",0);
+         map.set("q",0);
+         map.set("r",0);
+         map.set("s",0);
+         map.set("t",0);
+         map.set("u",0);
+         map.set("v",0);
+         map.set("w",0);
+         map.set("x",0);
+         map.set("y",0);
+         map.set("z",0);
+      */
+
+      for(let j=97;j < =122;j++) {
+        let ch=String.fromCharCode(j);
+        map.set(ch,0);
+      }
+         
+      for(let i=0;i < s.length;i++)
+        {
+          let v=map.get(s[i]);
+          map.set(s[i], v+1);
+        }
+        let result="";
+        for(let [k,v] of map.entries())
+        {
+          if(v>0){
+            result+= k+"="+v+" ";
+          }
+        }
+        console.log(result);
+    </pre>
+      <span>Input:</span>&nbsp;abcadeecfb
+     <br>
+      <span>Output:</span>&nbsp;
+      <pre class="pre1">
+      a=2
+      b=2
+      c=2
+      d=1
+      e=2
+      f=1
+      </pre>
+      <br><br><br><br><br><br><br><br>
+      <hr>
+      <br>
+
+      
+</body>
+</html>
