@@ -88,14 +88,12 @@
           let v=map.get(s[i]);
           map.set(s[i], v+1);
         }
-        let result="";
         for(let [k,v] of map.entries())
         {
           if(v>0){
-            result+= k+"="+v+" ";
+            console.log(k+"="+v);
           }
         }
-        console.log(result);
     </pre>
       <span>Input:</span>&nbsp;abcadeecfb
      <br>
